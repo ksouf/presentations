@@ -25,18 +25,43 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Specification by example (a retrospective of 6 years usage)</section>
+				<section>Specification by example  <br /> (a retrospective of 6 years usage)</section>
 				<section>Start with sunny scenarios
 					<aside class="notes">
+						don't misunderstand me : we do to cover all the feature well.
 						there is no value on superficial validation.
-						we still some edge cases
-						we also need "Deep validation for complex cases"
-						but no need for to put every case 'a build with 30 min with every case on one of costomer'
+						we still some edge cases.
+						we also need "Deep validation for complex cases".
+						but no need for to put every case "a build with 30 min with every case on one of costumer"
+						Transition -> let's be more specific
 					</aside>
 				</section>
-				<section>Only command scenarios</section>
-				<section>use domain events in 'when' step</section>
-				<section>Don't do it with batch application</section>
+				<section>Only command scenarios
+					<aside class="notes">
+					the most rich business behavior is in the command side
+					the querying still gives value but mostly restructuring data => waste of time in bdd.
+					but queries still need to be to tested / implemented.
+					we also need "Deep validation for complex cases"
+					Transition -> to trigger a command you need an ... event !!!
+				  </aside>
+				</section>
+				<section>use domain events in 'when' step
+					<aside class="notes">
+						I have discovered few workshops that can be helpful like event storming.
+						the use of a event facilitates the when side : the only needed thing et to structure the event.
+						Transition -> event also are used to trigger batch application
+					</aside>
+				</section>
+				<section>Don't do it with batch application
+					<aside class="notes">
+						- i worked on big company producing cars.
+						- we had a guy who got excited about every new approach.
+						- he said let's try it i did'nt like the idea but i didn't it before so i tried it.
+						- batch app mostly don't have a rich business rules and business behavior.
+						if that's the case do only on the small code with rich business rules / behavior.
+						Transition -> who don't app without 'direct' business value.
+					</aside>
+				</section>
 				<section>The Product Owner is your friend</section>
 				<section>BDD is not UI</section>
 			</div>
